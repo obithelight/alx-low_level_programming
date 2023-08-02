@@ -1,7 +1,8 @@
 # 0x08. C - Recursion
-	C, Recursion
+- C, Recursion
 
-https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/219/a88.jpg
+![recursion](https://github.com/obithelight/alx-low_level_programming/assets/91734251/c59565b9-8e39-4fce-aeb6-18e68ec4114d)
+
 
 ## Learning Objectives
 - At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
