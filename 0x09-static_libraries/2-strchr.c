@@ -1,13 +1,29 @@
 #include "main.h"
+#include <string.h>
 
 /**
- * _strchr - Testing.
- * @s: A buffer to copy the string to.
- * @c: A source string to copy.
- * Return: A pointer to the destination string @dest.
+ * _strchr - locates a character in a string
+ * @s: string
+ * @c: character in a string
+ * Return: pointer to first occurence of c in s,
+ *	or NULL character if is not found
  */
 
 char *_strchr(char *s, char c)
 {
-
+	for (; strlen(s); s++)
+	{
+		if (*s == c)
+		{
+			return (s);
+		}
+	}
+	if (*s == c)
+	{
+		return (s);
+	}
+	else
+	{
+		return ('\0');
+	}
 }
