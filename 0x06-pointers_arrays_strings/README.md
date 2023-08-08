@@ -1,5 +1,7 @@
-# 0x06. C - More pointers, arrays and strings
+# 0x06. C - More pointers, arrays, and strings
 - C
+
+![pointers](https://github.com/obithelight/alx-low_level_programming/assets/91734251/0d116be8-19bb-4e5c-8564-6590b2dbd027)
 
 ## Learning Objectives
 - At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
