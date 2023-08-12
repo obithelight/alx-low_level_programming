@@ -12,8 +12,9 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	char *box;
+	unsigned int i;
 
-	ptr = 0;
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
@@ -24,5 +25,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+
+	box = ptr;
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		box[i] = 0;
+	}
+
 	return (ptr);
 }
