@@ -20,6 +20,8 @@ int *array_range(int min, int max)
 
 	size = max - min + 1;
 	box = malloc(sizeof(*box) * size);
+	if (box == NULL)
+		return (NULL);
 
 	for (i = 0; min + i <= max; i++)
 		box[i] = min + i;
