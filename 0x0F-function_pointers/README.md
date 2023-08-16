@@ -1,5 +1,7 @@
-# 0x0F. C - Function pointers
+# 0x0F. C - Function Pointers
 - A function pointer is a concept in programming languages that support pointers, like C and C++, which allows you to store the address of a function and then later call that function indirectly through the pointer. In other words, a function pointer points to a memory address where a function is stored, enabling you to invoke the function through the pointer.
+
+![pointers](https://github.com/obithelight/alx-low_level_programming/assets/91734251/d08c0b3b-b350-438d-b2c2-45af8d8ce905)
 
 ## Learning Objectives
 
