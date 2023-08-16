@@ -18,3 +18,4 @@
 
 ### Where does a function pointer point to in the virtual memory
 - A function pointer points to a specific memory address in the virtual memory of your program. This address corresponds to the location where the machine code for the function is stored. The exact location in virtual memory depends on various factors, including the operating system, memory layout, and compiler.
+- In most cases, function pointers in C and C++ point to the beginning of the machine code for the specified function. When you invoke the function through the pointer, the CPU jumps to that memory address and starts executing the code of the function.
