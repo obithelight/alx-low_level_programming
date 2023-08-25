@@ -1,6 +1,15 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+/*
+ * File: lists.h
+ * Auth: Brennan D Baraban
+ * Desc: Header file containing prototypes and definitions for all functions
+ *       and types written in the 0x11-singly_linked_lists directory.
+ */
+
+#include <stdlib.h>
+
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -15,8 +24,6 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
-
-#include <stdlib.h>
 
 int _putchar(char c);
 size_t print_list(const list_t *h);
