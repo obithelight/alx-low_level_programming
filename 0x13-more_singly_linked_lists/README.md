@@ -2,12 +2,17 @@
 
 A singly linked list is a data structure that consists of a sequence of elements, where each element (node) stores both a value and a reference (or link) to the next node in the sequence. The last node typically points to a null reference, indicating the end of the list.
 
+
+![linked_list](https://github.com/obithelight/alx-low_level_programming/assets/91734251/68a1299f-7e74-4c96-aad9-65ce6145cea9)
+
+
+
 ## Each node in a singly linked list has two main components:
 
 - Value/Data: This component holds the actual value or data that the node is intended to store.
 - Next Pointer/Reference: This component is a reference (pointer) to the next node in the list. It allows you to traverse the list by moving from one node to the next.
 
-Singly linked lists are useful for dynamic data storage where elements can be efficiently inserted or removed from the beginning of the list. However, accessing elements in the middle or end of the list requires traversing through the nodes one by one.
+Singly-linked lists are useful for dynamic data storage where elements can be efficiently inserted or removed from the beginning of the list. However, accessing elements in the middle or end of the list requires traversing through the nodes one by one.
 
 ## Some key operations you can perform on a singly linked list:
 
