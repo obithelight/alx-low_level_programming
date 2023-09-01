@@ -18,7 +18,7 @@ Singly linked lists are useful for dynamic data storage where elements can be ef
 - Length: Count the number of nodes in the list.
 
 ## How to use linked lists
-- Using linked lists involves creating, manipulating, and interacting with nodes to build and manage the list.
+Using linked lists involves creating, manipulating, and interacting with nodes to build and manage the list.
 
 ### 1. Define the Node Structure:
 Decide what data you want to store in each node. Create a structure or class that includes a value/data field and a reference/pointer to the next node.
