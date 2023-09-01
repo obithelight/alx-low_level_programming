@@ -1,6 +1,9 @@
 # 0x14. C - Bit manipulation
 
-Manipulating bits and using bitwise operators is a fundamental concept in computer programming, particularly when dealing with low-level operations and optimizations. Bitwise operators allow you to perform operations at the individual bit level within integer values.
+Manipulating bits and using bitwise operators is fundamental in computer programming, mainly when dealing with low-level operations and optimizations. Bitwise operators allow you to perform functions at the individual bit level within integer values.
+
+![bitwise](https://github.com/obithelight/alx-low_level_programming/assets/91734251/27a92e5e-f90c-4f1f-afe1-70f5fc62a3c2)
+
 
 ## Learning Objectives
 - How to manipulate bits and use bitwise operators
