@@ -1,6 +1,6 @@
 # 0x18. C - Dynamic libraries
 
-   ![images](https://github.com/obithelight/alx-low_level_programming/assets/91734251/d18388ef-ed3e-436f-b303-3f7ca6f8148b)
+![images](https://github.com/obithelight/alx-low_level_programming/assets/91734251/d18388ef-ed3e-436f-b303-3f7ca6f8148b)
 
 - A dynamic library (also known as a `shared library`) is a type of library that is loaded into memory at runtime by a program. It contains code and data that multiple programs can use simultaneously, allowing for efficient code reuse and sharing. Dynamic libraries are different from static libraries, which are linked at compile-time.
 
