@@ -33,7 +33,7 @@ This way, when you run your program, the dynamic linker will search for librarie
 
 ## Basic Commands:
 
-`nm`: Displays symbol names in object files or libraries. For example: `nm libexample.so`.
-`ldd`: Shows shared library dependencies of an executable. For example: `ldd myprogram`.
-`ldconfig`: Updates the system's dynamic linker cache. It is typically run after installing or removing shared libraries. For example: `sudo ldconfig`.
-These commands are useful for inspecting and managing dynamic libraries and their dependencies on a system.
+- `nm`: Displays symbol names in object files or libraries. For example: `nm libexample.so`.
+- `ldd`: Shows shared library dependencies of an executable. For example: `ldd myprogram`.
+- `ldconfig`: Updates the system's dynamic linker cache. It is typically run after installing or removing shared libraries. For example: `sudo ldconfig`.
+- These commands are useful for inspecting and managing dynamic libraries and their dependencies on a system.
