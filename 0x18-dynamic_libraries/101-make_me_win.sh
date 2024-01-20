@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P .. https://raw.githubusercontent.com/obithelight/alx-low_level_programming/master/0x18-dynamic_libraries/libhack.so
-export LD_PRELOAD="$PWD/../libhack.so"
+gcc -shared -o myprintf.so -fPIC testing.c
+export LD_PRELOAD=./myprintf.so:$LD_LIBRARY_PATH
