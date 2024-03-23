@@ -1,5 +1,7 @@
 # 0x1C. C - Makefiles
 
+![make_files](https://github.com/obithelight/alx-low_level_programming/assets/91734251/e2a447ec-c9d5-4891-a6ca-36a511ac6c33)
+
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -8,8 +10,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - When, why and how to use Makefiles
 - What are rules and how to set and use them
 - What are explicit and implicit rules
-- What are the most common / useful rules
-- What are variables and how to set and use them
+- What are the most common/useful rules
+- What are variables and how do we set and use them
 
 - In this project, I practiced writing Makefiles.
 
@@ -20,7 +22,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 ## Helper Files :raised_hands:
 
 * [school.c](./school.c): C function that displays a seahorse in text.
-Used for Makefile practice purposes throughout project.
+They are used for Makefile practice purposes throughout the project.
 
 * [main.c](./main.c): Main C function that runs the function defined in
 [school.c](./school.c).
@@ -55,10 +57,10 @@ Used for Makefile practice purposes throughout project.
   * [3-Makefile](./3-Makefile): Makefile that creates an executable `school` based on
   [school.c](./school.c) and [main.c](./main.c). Builds on [2-Makefile](./2-Makefile)
   with:
-    * Rule `clean` that deletes all Emacs/Vim temporary files as well as the
-    executable.
+    * Rule `clean` that deletes all Emacs/Vim temporary files and the
+    executables.
     * Rule `oclean` that deletes the object files.
-    * Rule `fclean` that deltes all of the temporary files, executable, and
+    * Rule `fclean` that deletes all of the temporary files, executable, and
     object files.
     * Rule `re` that forces recompilation of all source files.
     * Variable `RM` that defines the command to delete files.
@@ -78,9 +80,9 @@ Used for Makefile practice purposes throughout project.
     * Water is represented by `0`.
     * Land is represented by `1`.
     * Each element of the lists represents a cell square of side length 1.
-    * Grid cells are connected horizontally/verticaly (not diagonally).
+    * Grid cells are connected horizontally/vertically (not diagonally).
     * The grid is rectangular, with a width and height not exceeding 100.
-    * The grid is completely surrounded by water, and there is either exactly
+    * The grid is surrounded by water, and there is either exactly
     one island or nothing.
     * The island does not contain lakes (water inside disconnected from
     surrounding land).
