@@ -23,29 +23,30 @@ size_t min(size_t num1, size_t num2)
  */
 int jump_search(int *array, size_t size, int value)
 {
-        size_t prev = 0;
-        size_t step = 0;
-	
+	size_t prev = 0;
+	size_t step = 0;
+
 	if (!array || !size)
 		return (-1);
 
-        /* find the block that may contain the value */
-        while (array[step] < value)
-        {
-                printf("Value checked array[%ld] = [%d]\n", step, array[step]);
-                prev = step;
-                step += sqrt(size);
-                if (step > size - 1)
-                        break;
-        }
+	/* find the block that may contain the value */
+	while (array[step] < value)
+	{
+		printf("Value checked array[%ld] = [%d]\n", step, array[step]);
+		prev = step;
+		step += sqrt(size);
+		if (step > size - 1)
+			break;
+	}
 	printf("Value found between indexes [%ld] and [%ld]\n", prev, step);
-        /* linear search */
-        while (prev <= min(step, size - 1))
-        {
-                printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-                if (array[prev] == value)
-                        return (prev);
-                prev++;
-        }
-        return (-1);
+
+	/* linear search */
+	while (prev <= min(step, size - 1))
+	{
+		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
+		if (array[prev] == value)
+			return (prev);
+		prev++;
+	}
+	return (-1);
 }
