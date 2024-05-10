@@ -16,9 +16,9 @@
  */
 typedef struct listint_s
 {
-    int n;
-    size_t index;
-    struct listint_s *next;
+	int n;
+	size_t index;
+	struct listint_s *next;
 } listint_t;
 
 size_t min(size_t num1, size_t num2);
@@ -31,5 +31,7 @@ int advanced_binary(int *array, size_t size, int value);
 void print_array(int *array, size_t lowest, size_t highest);
 int interpol_helper(int *array, size_t low, size_t high, int value);
 listint_t *jump_list(listint_t *list, size_t size, int value);
+int b_search(int *array, size_t low, size_t high, int value);
+
 
 #endif /* SEARCH_ALGOS_H */
