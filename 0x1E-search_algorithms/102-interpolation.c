@@ -1,54 +1,52 @@
 #include "search_algos.h"
-
 /**
- * interpolation_search - searches for a value in an array of integers with ISA
- * @array: pointer to the first element of array
- * @size: number of elements in array
- * @value: value to search for
- * Return: the function
+ * interpolation_search - searches for a value in a sorted array of integers
+ *			using the Interpolation search algorithm
+ * @array: is a pointer to the first element of the array to search in
+ * @size: is the number of elements in array
+ * @value: is the value to search for
+ *
+ * Return: the first index where value is located
  */
+
 int interpolation_search(int *array, size_t size, int value)
 {
-	if (!array)
+	if (array == NULL)
 		return (-1);
-
 	return (interpol_helper(array, 0, size - 1, value));
 }
 
 /**
- * interpol_helper - helper function
- * @array: pointer to the first element
- * @low: the lower bound
- * @high: the upper bound
- * @value: value to search for
- * Return: first index where value is located
+ * interpol_helper - helper function to interpolation_search
+ * @array: is a pointer to the first element of the array to search in
+ * @low: is the start element
+ * @high: is the end element
+ * @value: is the value to search for
+ *
+ * Return: the first index where value is located
  */
-
 int interpol_helper(int *array, size_t low, size_t high, int value)
 {
-	size_t pos;
+	int position;
 
-	pos = low + (((double)(high - low) / (array[high] - array[low])) *
-	(value - array[low]));
-
-	if (pos >= low + high)
+	if (low <= high)
 	{
-		printf("Value checked array[%ld] is out of range\n", pos);
-		return (-1);
-	}
+		position = low + (((double)(high - low) / (array[high] - array[low]))
+				* (value - array[low]));
+		if (value < array[low] || value > array[high])
+		{
+			printf("Value checked array[%d] is out of range\n", position);
+			return (-1);
+		}
+		printf("Value checked array[%d] = [%d]\n", position, array[position]);
+		if (array[position] == value)
+			return (position);
 
-	printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
+		if (array[position] < value)
+			return (interpol_helper(array, position + 1, high, value));
 
-	if (array[pos] == value)
-		return (pos);
-	else if (array[pos] > value)
-	{
-		return (interpol_helper(array, low, high - 1, value));
+		if (array[position] > value)
+			return (interpol_helper(array, low, position - 1, value));
 	}
-	else
-	{
-		return (interpol_helper(array, low + 1, high, value));
-	}
-
 	return (-1);
 }
