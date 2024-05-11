@@ -1,34 +1,42 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
-listint_t *create_list(int *array, size_t size);
-void print_list(const listint_t *list);
-void free_list(listint_t *list);
-
 /**
- * main - Entry point
+ * jump_list - searches for a value in a sorted linked list of integers
+ * using the Jump search algorithm.
  *
- * Return: Always EXIT_SUCCESS
+ * @list: Pointer to the head of the linked list
+ * @size: Number of nodes in the linked list
+ * @value: The value to search for
+ *
+ * Return: Pointer to the first node where value is located or
+ * if value is not present in head or if head is NULL, return NULL
  */
-int main(void)
+listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-    listint_t *list, *res;
-    int array[] = {
-        0, 1, 2, 3, 4, 7, 12, 15, 18, 19, 23, 53, 61, 62, 76, 99
-    };
-    size_t size = sizeof(array) / sizeof(array[0]);
+	listint_t *low =  NULL, *high = NULL;
+	size_t limit = 0;
 
-    list = create_list(array, size);
-    print_list(list);
-
-    res =  jump_list(list, size, 53);
-    printf("Found %d at index: %lu\n\n", 53, res->index);
-    res =  jump_list(list, size, 2);
-    printf("Found %d at index: %lu\n\n", 2, res->index);
-    res =  jump_list(list, size, 999);
-    printf("Found %d at index: %p\n", 999, (void *) res);
-
-    free_list(list);
-    return (EXIT_SUCCESS);
+	if (list != NULL)
+	{
+		low = list;
+		high = list;
+		while (high->next != NULL && high->index < size && high->n < value)
+		{
+			low = high;
+			limit += sqrt(size);
+			while (high->index < limit && high->next != NULL)
+				high = high->next;
+			printf("Value checked at index [%lu] = [%d]\n", high->index, high->n);
+		}
+		printf("Value found between indexes [%lu] and [%lu]\n",
+		       low->index, high->index);
+		while (low != NULL && low->index < size && low->index <= high->index)
+		{
+			printf("Value checked at index [%lu] = [%d]\n", low->index, low->n);
+			if (low->n == value)
+				return (low);
+			low = low->next;
+		}
+	}
+	return (NULL);
 }
