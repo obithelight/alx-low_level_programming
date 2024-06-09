@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 
         if ((*(argv[2]) == '/' || *(argv[2]) == '%') && b == 0)
         {
-                printf("Error: Division by zero\n");
+                printf("Error\n");
                 exit(100);
         }
 
